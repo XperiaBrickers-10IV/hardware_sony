@@ -22,7 +22,7 @@ namespace charger {
 
 enum SUPPORTED_BOARD {
     kona = 0,
-    lahaina = 1,
+    holi = 1,
 };
 
 static constexpr const char* kChgActivationPath[] = {
@@ -48,8 +48,8 @@ Charger::Charger() {
 
     if (strncmp(board_name, "kona", strlen("kona")) == 0) {
         chargerBoard = kona;
-    } else if (strncmp(board_name, "lahaina", strlen("lahaina")) == 0) {
-        chargerBoard = lahaina;
+    } else if (strncmp(board_name, "holi", strlen("holi")) == 0) {
+        chargerBoard = holi;
     } else {
         LOG(ERROR) << "Failed to get board number, default to kona";
         chargerBoard = kona;
